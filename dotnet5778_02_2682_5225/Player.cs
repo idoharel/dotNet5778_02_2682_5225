@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace dotnet5778_02_2682_5225
 {
-    class CardStock
+    class Player
     {
-        private List<Card> Cards;
-       
-    }
+        string name;
+        Queue<Card> playerCards = new Queue<Card>();//queue of the player's cards
 
+    }
 }
-//שינוי
