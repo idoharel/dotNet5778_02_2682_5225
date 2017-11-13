@@ -38,27 +38,29 @@ namespace dotnet5778_02_2682_5225
             Cards[secend] = tmp;
         }
 
-//        public override string ToString()
-//        {
-//            string temp1,temp2=null;
-//            foreach (var item in Cards)
-//            {
-//               temp1 = item.ToString();
-//               temp2 += temp1 + '\n';
-//            }
-//            return temp2;
-//        }
+        public override string ToString()
+        {
+            string temp1, temp2 = null;
+            foreach (var item in Cards)
+            {
+                temp1 = item.ToString();
+                temp2 += temp1 + '\n';
+            }
+            return temp2;
+        }
 
-////        public void distribute(params Player[] players)
-////        {
-////            foreach (Player p in players)
-//            {
-//                for(int i=0;i<players.Length;i++)
-//                   // p.addCard(Cards.to)
-//            }
+        public void distribute(params Player[] players)
+        {
+            List<Card> temp;
+            foreach (Player p in players)
+            {
+                temp = Cards.GetRange(0, (26 / players.Length)-1);
+                p.addCard(temp.ToArray());
+                Cards.RemoveRange(0, 26 / (players.Length)-1);
+            }
 
-//        }
+        }
 
-//    }
-//}
+    }
+}
 
