@@ -49,7 +49,7 @@ namespace dotnet5778_02_2682_5225
         }
 
         //override toString to return name and color card
-        public string toString()
+        public override string ToString()
         {
             return CardName + color.ToString();
         }
