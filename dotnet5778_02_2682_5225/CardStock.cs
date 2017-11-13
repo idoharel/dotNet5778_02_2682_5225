@@ -10,6 +10,13 @@ namespace dotnet5778_02_2682_5225
     {
         private List<Card> Cards;
        
+        private CardStock()
+        {
+            for (int i = 2; i < 15; i++)
+                i++;
+
+        }
     }
+
 }
 //שינוי
