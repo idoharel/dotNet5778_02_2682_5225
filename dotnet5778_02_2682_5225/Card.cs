@@ -11,8 +11,9 @@ namespace dotnet5778_02_2682_5225
     //class define card in stack
     class Card : IComparable
     {
-        private E_color color;
         private int number;
+        private E_color color;
+        
 
         #region property
         public int Number
