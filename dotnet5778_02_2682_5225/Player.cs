@@ -10,6 +10,11 @@ namespace dotnet5778_02_2682_5225
     {
         private string name;
         private Queue<Card> playerCards = new Queue<Card>();//queue of the player's cards
+
+        //property name
+        public string Name { get; set; }
+       
+
         public void addCard(params Card[] cards)//function that get ine or more cards and push them to the end of the queue
         {
             foreach (var i in cards)
@@ -27,7 +32,7 @@ namespace dotnet5778_02_2682_5225
                 tmp2 = allCards;
                 allCards = tmp2 + '\n' + tmp1;
             }
-            return name + '\n' + playerCards.Count + allCards;
+            return Name + '\n' + playerCards.Count + allCards;
         }
 
         public bool lose()//check if the player lose
