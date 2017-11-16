@@ -39,7 +39,9 @@ namespace dotnet5778_02_2682_5225
 
         public Card pop()
         {
-            return playerCards.Dequeue();
+            if (!(playerCards.Count == 0))
+                return playerCards.Dequeue();
+            else return null;
         }
     }
 
