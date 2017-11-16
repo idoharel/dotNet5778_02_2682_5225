@@ -8,7 +8,7 @@ namespace dotnet5778_02_2682_5225
 {
     public partial class Game
     {
-       private CardStock kupa;
+        private CardStock kupa = new CardStock();
        private Player ido, yohanan;
 
         public Game()

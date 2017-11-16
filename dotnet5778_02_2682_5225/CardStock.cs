@@ -9,7 +9,7 @@ namespace dotnet5778_02_2682_5225
 {
     class CardStock :IEnumerable
     {
-        private List<Card> Cards;
+        private List<Card> Cards = new List<Card>();
         //constractor - initializes the deck with 26 cards
         public CardStock()
         {
@@ -59,9 +59,9 @@ namespace dotnet5778_02_2682_5225
             List<Card> temp;
             foreach (Player p in players)
             {
-                temp = Cards.GetRange(0, (26 / players.Length)-1);
+                temp = Cards.GetRange(0, (26 / players.Length));
                 p.addCard(temp.ToArray());
-                Cards.RemoveRange(0, 26 / (players.Length)-1);
+                Cards.RemoveRange(0, 26 / (players.Length));
             }
         }
 
