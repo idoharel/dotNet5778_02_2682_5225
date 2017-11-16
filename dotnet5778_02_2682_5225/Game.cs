@@ -12,14 +12,14 @@ namespace dotnet5778_02_2682_5225
         Player ido, yohanan;
         public void startGame()
         {
-            
+            kupa.shuffle();
+            kupa.distribute(ido, yohanan);
         }
-        public void nothing()
+       public bool endGame()
         {
-
+            if (!(ido.lose()) ||!( yohanan.lose()))
+                return true;
+            else return false;
         }
-
-        public void idoharel()
-        { }
     }
 }
