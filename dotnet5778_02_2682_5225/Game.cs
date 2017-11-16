@@ -12,7 +12,13 @@ namespace dotnet5778_02_2682_5225
         Player ido, yohanan;
         public void startGame()
         {
-
+            return;
         }
+        public void nothing()
+        {
+        }
+
+        public void idoharel()
+        { }
     }
 }
