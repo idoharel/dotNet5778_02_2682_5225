@@ -27,8 +27,8 @@ namespace dotnet5778_02_2682_5225
             int first, secend;
             for (int i = 1; i < 14; i++)
             {
-                first = r.Next(1, 27);
-                secend = r.Next(1, 27);
+                first = r.Next(1, 26);
+                secend = r.Next(1, 26);
                 if (first != secend) { swap(first, secend); }
             }
         }

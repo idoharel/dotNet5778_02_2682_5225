@@ -31,7 +31,7 @@ namespace dotnet5778_02_2682_5225
         public override string ToString()//to string overloading that returns the player, how many cards he have, and all their names
         {
             string allCards = null;
-            string tmp1, tmp2;
+            string tmp1 = null, tmp2 = null;
             foreach (var i in playerCards)
             {
                 tmp1 = i.CardName;
