@@ -6,13 +6,8 @@ using System.Threading.Tasks;
 
 namespace dotnet5778_02_2682_5225
 {
-    class Game
+    public class parital Game
     {
-        CardStock kupa;
-        Player ido, yohanan;
-        public void startGame()
-        {
 
-        }
     }
 }
