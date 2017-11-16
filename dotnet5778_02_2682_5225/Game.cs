@@ -10,6 +10,46 @@ namespace dotnet5778_02_2682_5225
     {
        private CardStock kupa = new CardStock();
        private Player ido, yohanan;
+        #region property
+        internal CardStock Kupa
+        {
+            get
+            {
+                return kupa;
+            }
+
+            set
+            {
+                kupa = value;
+            }
+        }
+
+        internal Player Ido
+        {
+            get
+            {
+                return ido;
+            }
+
+            set
+            {
+                ido = value;
+            }
+        }
+
+        internal Player Yohanan
+        {
+            get
+            {
+                return yohanan;
+            }
+
+            set
+            {
+                yohanan = value;
+            }
+        }
+        #endregion
 
         public Game()
         {
@@ -17,8 +57,7 @@ namespace dotnet5778_02_2682_5225
             yohanan = new Player("yohanan");
         }
 
-        internal Player Ido { get; }
-        internal Player Yohanan { get; }
+        
 
 
         public void startGame()

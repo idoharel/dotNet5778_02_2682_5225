@@ -14,7 +14,7 @@ namespace dotnet5778_02_2682_5225
             Game theGame = new Game();
             theGame.startGame();
             Console.WriteLine("Hello, welcome to the game,\nthe player:");
-            Console.WriteLine(theGame.Ido);
+            Console.WriteLine(theGame.Yohanan);
             Console.WriteLine(theGame.Ido);
             do
             {

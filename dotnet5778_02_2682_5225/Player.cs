@@ -15,12 +15,33 @@ namespace dotnet5778_02_2682_5225
         { name = _name; }
 
         //property name
-        public string Name { get; set; }
+        #region property
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
 
-        internal Queue<Card> PlayerCards { get; set; }
+            set
+            {
+                name = value;
+            }
+        }
 
+        internal Queue<Card> PlayerCards
+        {
+            get
+            {
+                return playerCards;
+            }
 
-
+            set
+            {
+                playerCards = value;
+            }
+        }
+        #endregion
         public void addCard(params Card[] cards)//function that get ine or more cards and push them to the end of the queue
         {
             foreach (var i in cards)
@@ -38,7 +59,7 @@ namespace dotnet5778_02_2682_5225
                 tmp2 = allCards;
                 allCards = tmp2 + '\n' + tmp1;
             }
-            return Name + '\n' + playerCards.Count + allCards;
+            return Name + "\nnumber card: " + playerCards.Count + allCards;
         }
 
         public bool lose()//check if the player lose
