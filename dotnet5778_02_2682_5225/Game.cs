@@ -16,6 +16,9 @@ namespace dotnet5778_02_2682_5225
         }
         public void nothing()
         {
+        }
 
+        public void idoharel()
+        { }
     }
 }
