@@ -13,7 +13,10 @@ namespace dotnet5778_02_2682_5225
 
         //property name
         public string Name { get; set; }
-       
+
+        internal Queue<Card> PlayerCards { get; set; }
+
+
 
         public void addCard(params Card[] cards)//function that get ine or more cards and push them to the end of the queue
         {

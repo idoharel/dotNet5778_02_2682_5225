@@ -13,5 +13,9 @@ namespace dotnet5778_02_2682_5225
             if (!ido.lose()) { return yohanan.Name; }
             return ido.Name;
         }
+        public override string ToString()
+        {
+            return yohanan.Name + ' ' + yohanan.PlayerCards.Count() + '\n' + ido.Name + ' ' + ido.PlayerCards.Count();
+        }
     }
 }

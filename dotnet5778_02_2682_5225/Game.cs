@@ -8,18 +8,17 @@ namespace dotnet5778_02_2682_5225
 {
     public partial class Game
     {
-        CardStock kupa;
-        Player ido, yohanan;
+       private CardStock kupa;
+       private Player ido, yohanan;
+
+        internal Player Ido { get; }
+        internal Player Yohanan { get; }
+
+
         public void startGame()
         {
             kupa.shuffle();
             kupa.distribute(ido, yohanan);
         }
-        public void nothing()
-        {
-        }
-
-        public void idoharel()
-        { }
     }
 }
