@@ -43,11 +43,22 @@ namespace dotnet5778_02_2682_5225
                 yohanan.addCard(war);
             else
             {
-                Card[] bigWar = new Card[4];
-                bigWar = war;
-                bigWar[2] = ido.pop();
-                bigWar[3] = yohanan.pop();
+                evenCards(war);//function that check the next pair of cards in a reccursive way until someone is winning
+
             }
+        }
+
+        private void evenCards(Card[] war)
+        {
+            Card[] bigWar = new Card[war.Count()+2];
+            bigWar = war;
+            bigWar[war.Count()] = ido.pop();
+            bigWar[war.Count() + 1] = yohanan.pop();
+            if (bigWar[war.Count()].Number > bigWar[war.Count() +1 ].Number)
+                ido.addCard(bigWar);
+            else if (bigWar[war.Count()].Number > bigWar[war.Count() + 1].Number)
+                yohanan.addCard(bigWar);
+            else evenCards(bigWar);
         }
     }
 }
