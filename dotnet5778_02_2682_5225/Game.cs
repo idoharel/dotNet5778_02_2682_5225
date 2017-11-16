@@ -90,12 +90,14 @@ namespace dotnet5778_02_2682_5225
         private void evenCards(Card[] war)
         {
             Card[] bigWar = new Card[war.Count()+2];
-            bigWar = war;
-            bigWar[war.Count()] = ido.pop();
-            bigWar[war.Count() + 1] = yohanan.pop();
-            if (bigWar[war.Count()].Number > bigWar[war.Count() +1 ].Number)
+            int index = war.Count();
+            for (int i=0;i<index;i++)
+                bigWar[i] = war[i];
+            bigWar[index] = ido.pop();
+            bigWar[index + 1] = yohanan.pop();
+            if (bigWar[index].Number > bigWar[index +1 ].Number)
                 ido.addCard(bigWar);
-            else if (bigWar[war.Count()].Number > bigWar[war.Count() + 1].Number)
+            else if (bigWar[index+1].Number > bigWar[index].Number)
                 yohanan.addCard(bigWar);
             else evenCards(bigWar);
         }
