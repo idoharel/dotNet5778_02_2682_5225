@@ -19,19 +19,19 @@ namespace dotnet5778_02_2682_5225
             do
             {
                 if (theGame.endGame()) { break; }
-                Console.WriteLine("to run all game press-0 \nto see the next steps press-1");
+                Console.WriteLine("To run the entire game press-0 \nTo see the next steps press-1");
                 ch = Convert.ToInt32(Console.ReadLine());
                 switch (ch)
                 {
-                    case 0:
+                    case 0://run until one of the players wins
                         while (theGame.endGame() != true)
                             theGame.step();
                         break;
-                    case 1:
+                    case 1://run one battle at a tome
                             theGame.step();
                                 break;
                     default:
-                        Console.WriteLine("wrong choice, choice again");
+                        Console.WriteLine("Wrong choice, try again");
                         break;
                 }
             }
