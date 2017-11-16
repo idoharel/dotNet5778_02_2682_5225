@@ -16,10 +16,10 @@ namespace dotnet5778_02_2682_5225
             Console.WriteLine("Hello, welcome to the game,\n the player:");
             theGame.Yohanan.ToString();
             theGame.Ido.ToString();
-            Console.WriteLine("to run all game press-0 \nto see the next steps press-1");
             do
             {
                 if (theGame.endGame()) { break; }
+                Console.WriteLine("to run all game press-0 \nto see the next steps press-1");
                 ch = Convert.ToInt32(Console.ReadLine());
                 switch (ch)
                 {

@@ -11,6 +11,9 @@ namespace dotnet5778_02_2682_5225
         private string name;
         private Queue<Card> playerCards = new Queue<Card>();//queue of the player's cards
 
+        public Player(string _name)
+        { name = _name; }
+
         //property name
         public string Name { get; set; }
 

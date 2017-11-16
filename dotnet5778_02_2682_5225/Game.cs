@@ -11,6 +11,12 @@ namespace dotnet5778_02_2682_5225
        private CardStock kupa;
        private Player ido, yohanan;
 
+        public Game()
+        {
+            ido = new Player("ido");
+            yohanan = new Player("yohanan");
+        }
+
         internal Player Ido { get; }
         internal Player Yohanan { get; }
 
