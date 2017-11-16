@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace dotnet5778_02_2682_5225
 {
-    public class parital Game
+    public partial class Game
     {
-
     }
 }
