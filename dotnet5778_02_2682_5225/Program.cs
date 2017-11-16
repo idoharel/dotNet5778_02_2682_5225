@@ -24,26 +24,19 @@ namespace dotnet5778_02_2682_5225
                 switch (ch)
                 {
                     case 0:
-                        {
-                            while(true)
-                            {
-                                theGame.step();
-                                if (theGame.endGame()) { Console.WriteLine(theGame.checkVictory()); break; }
-                            }
-                            break;
-                        }
-                    case 1:
-                        {
+                        while (theGame.endGame() != true)
                             theGame.step();
-                            if (theGame.endGame()) { Console.WriteLine(theGame.checkVictory()); }
+                        break;
+                    case 1:
+                            theGame.step();
                                 break;
-                        }
                     default:
                         Console.WriteLine("wrong choice, choice again");
                         break;
                 }
             }
             while (true);
+            Console.WriteLine(theGame.checkVictory());
         }
     }
 }

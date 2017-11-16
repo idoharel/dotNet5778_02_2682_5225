@@ -33,11 +33,11 @@ namespace dotnet5778_02_2682_5225
         {
             get
             {
-                if (number == 11) { return "Jack"; }
-                else if (number == 12) { return "Queen"; }
-                else if (number == 13) { return "King"; }
-                else if (number == 14) { return "Ace"; }
-                else { return number.ToString(); }
+                if (number == 11) { return "Jack" +" "+ color; }
+                else if (number == 12) { return "Queen" + " " + color; }
+                else if (number == 13) { return "King" + " " + color; }
+                else if (number == 14) { return "Ace" + " " + color; }
+                else { return number.ToString() + " " + color; }
             }
         }
         #endregion

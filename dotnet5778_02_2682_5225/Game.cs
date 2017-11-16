@@ -77,9 +77,17 @@ namespace dotnet5778_02_2682_5225
             war[0] = ido.pop();
             war[1] = yohanan.pop();
             if (war[0].Number > war[1].Number)
+            {
                 ido.addCard(war);
+                Console.WriteLine(ido);
+                Console.WriteLine(yohanan);
+            }
             else if (war[1].Number > war[0].Number)
+            {
                 yohanan.addCard(war);
+                Console.WriteLine(ido);
+                Console.WriteLine(yohanan);
+            }
             else
             {
                 evenCards(war);//function that check the next pair of cards in a reccursive way until someone is winning
@@ -89,16 +97,24 @@ namespace dotnet5778_02_2682_5225
 
         private void evenCards(Card[] war)
         {
-            Card[] bigWar = new Card[war.Count()+2];
+            Card[] bigWar = new Card[war.Count() + 2];
             int index = war.Count();
-            for (int i=0;i<index;i++)
+            for (int i = 0; i < index; i++)
                 bigWar[i] = war[i];
             bigWar[index] = ido.pop();
             bigWar[index + 1] = yohanan.pop();
-            if (bigWar[index].Number > bigWar[index +1 ].Number)
+            if (bigWar[index].Number > bigWar[index + 1].Number)
+            {
                 ido.addCard(bigWar);
-            else if (bigWar[index+1].Number > bigWar[index].Number)
+                Console.WriteLine(ido);
+                Console.WriteLine(yohanan);
+            }
+            else if (bigWar[index + 1].Number > bigWar[index].Number)
+            {
                 yohanan.addCard(bigWar);
+                Console.WriteLine(ido);
+                Console.WriteLine(yohanan);
+            }
             else evenCards(bigWar);
         }
     }
