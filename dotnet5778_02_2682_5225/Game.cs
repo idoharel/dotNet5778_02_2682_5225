@@ -97,19 +97,21 @@ namespace dotnet5778_02_2682_5225
 
         private void evenCards(Card[] war)
         {
-            Card[] bigWar = new Card[war.Count() + 2];
+            Card[] bigWar = new Card[war.Count() + 4];
             int index = war.Count();
             for (int i = 0; i < index; i++)
                 bigWar[i] = war[i];
             bigWar[index] = ido.pop();
-            bigWar[index + 1] = yohanan.pop();
-            if (bigWar[index].Number > bigWar[index + 1].Number)
+            bigWar[index + 1] = ido.pop();
+            bigWar[index+2] = yohanan.pop();
+            bigWar[index + +3] = yohanan.pop();
+            if (bigWar[index+1].Number > bigWar[index + 3].Number)
             {
                 ido.addCard(bigWar);
                 Console.WriteLine(ido);
                 Console.WriteLine(yohanan);
             }
-            else if (bigWar[index + 1].Number > bigWar[index].Number)
+            else if (bigWar[index + 3].Number > bigWar[index+1].Number)
             {
                 yohanan.addCard(bigWar);
                 Console.WriteLine(ido);

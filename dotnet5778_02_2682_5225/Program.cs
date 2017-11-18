@@ -27,7 +27,7 @@ namespace dotnet5778_02_2682_5225
                         while (theGame.endGame() != true)
                             theGame.step();
                         break;
-                    case 1://run one battle at a tome
+                    case 1://run one battle at a tןme
                             theGame.step();
                                 break;
                     default:
@@ -36,7 +36,7 @@ namespace dotnet5778_02_2682_5225
                 }
             }
             while (true);
-            Console.WriteLine(theGame.checkVictory());
+            theGame.checkVictory();
         }
     }
 }
