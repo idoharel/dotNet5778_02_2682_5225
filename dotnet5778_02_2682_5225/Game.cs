@@ -104,7 +104,8 @@ namespace dotnet5778_02_2682_5225
             bigWar[index] = ido.pop();
             bigWar[index + 1] = ido.pop();
             bigWar[index+2] = yohanan.pop();
-            bigWar[index + +3] = yohanan.pop();
+            bigWar[index + 3] = yohanan.pop();
+            if (!ido.lose() || !yohanan.lose()) { return; }
             if (bigWar[index+1].Number > bigWar[index + 3].Number)
             {
                 ido.addCard(bigWar);
