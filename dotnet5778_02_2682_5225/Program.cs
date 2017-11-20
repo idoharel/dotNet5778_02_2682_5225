@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/* Ido Harel 203865225
+ * Yohanan Haik 036902682*/
 namespace dotnet5778_02_2682_5225
 {
     class Program
