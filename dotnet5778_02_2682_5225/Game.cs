@@ -71,7 +71,7 @@ namespace dotnet5778_02_2682_5225
                 return true;
             else return false;
         }
-        public void step()
+        public void step()//pops 2 cards, one from each player, and compare between them
         {
             Card[] war = new Card[2];
             war[0] = ido.pop();
@@ -97,7 +97,7 @@ namespace dotnet5778_02_2682_5225
 
         private void evenCards(Card[] war)
         {
-            Card[] bigWar = new Card[war.Count() + 4];
+            Card[] bigWar = new Card[war.Count() + 4];//define array that bigger then the last one, for insert all the cards
             int index = war.Count();
             for (int i = 0; i < index; i++)
                 bigWar[i] = war[i];
@@ -135,7 +135,7 @@ namespace dotnet5778_02_2682_5225
                 Console.WriteLine(ido);
                 Console.WriteLine(yohanan);
             }
-            else evenCards(bigWar);
+            else evenCards(bigWar);//if the second couple of cards is still evevn, we get into reccursive method that stops when someone win
         }
     }
 }
